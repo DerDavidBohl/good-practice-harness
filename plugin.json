@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "good-practice-harness",
+  "version": "1.0.0",
+  "description": "A set of Copilot skills for capturing, documenting, and implementing repository context.",
+  "keywords": [
+    "context",
+    "documentation",
+    "architecture",
+    "requirements",
+    "security",
+    "software-quality"
+  ]
+}
