@@ -16,3 +16,4 @@ description: Skill to document context in a structured and consistent manner. Us
 - All context documentations must have an ID to uniquely identify them.
 - Ensure that context IDs are consistent and follow a predefined naming convention.
 - Ensure all documentation outside the `/context` directory is consistent with the context documentation.
+- Ensure that all documented context always reflects the current skills standards and requirements.
