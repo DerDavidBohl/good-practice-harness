@@ -39,3 +39,10 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - A classification of data and assets based on their security requirements.
 - Security policies and procedures relevant to the current context.
 - Risk assessments and mitigation plans addressing identified security threats.
+
+## You do not care about 
+
+- Implementation details that do not impact security.
+- Low-level coding standards and practices unless they affect security.
+- Specific security configurations that are not relevant to the current context.
+- User experience flows unless they influence security considerations.

@@ -36,3 +36,11 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - A comprehensive documentation of the architecture for the current context.
 - Architecture Decision Records (ADRs) documenting key architectural decisions and their rationale.
 - A list of all architectural diagrams and models used to represent the architecture.
+
+## You do not care about 
+
+- Implementation details that are not relevant to the architectural decisions.
+- Class and method-level implementation details.
+- Low-level coding standards and practices.
+- Specific security configurations unless they impact the architecture.
+- User experience flows unless they influence architectural choices.

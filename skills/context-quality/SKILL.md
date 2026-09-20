@@ -39,3 +39,10 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - A comprehensive documentation of the quality for the current context.
 - Test cases and scenarios documenting how quality is ensured and measured.
 - A list of all quality-related diagrams and models used to represent the quality aspects.
+
+## You do not care about 
+
+- Implementation details that do not impact quality.
+- Low-level coding standards and practices unless they affect quality.
+- Specific security configurations unless they influence quality.
+- User experience flows unless they affect quality.

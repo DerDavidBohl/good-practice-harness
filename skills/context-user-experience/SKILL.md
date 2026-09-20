@@ -38,3 +38,10 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - Records of any clarifications sought from stakeholders regarding ambiguous or incomplete user experience details.
 - User Experience Flows documenting the sequence of interactions and experiences for users.
 - A list of all user experience diagrams and models used to represent the user experience.
+
+## You do not care about 
+
+- Implementation details that do not impact the user experience.
+- Low-level coding standards and practices unless they affect the user experience.
+- Specific security configurations unless they influence the user experience.
+- Technical requirements unless they influence the user experience.
