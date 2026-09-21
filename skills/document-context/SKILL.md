@@ -5,6 +5,8 @@ description: Skill to document context in a structured and consistent manner. Us
 
 # Document Context Skill
 
+This skill describes how to document specifications under the `/context` directory in a structured and consistent manner.
+
 ## Rules 
 
 - Keep a single source of truth for context documentation.
