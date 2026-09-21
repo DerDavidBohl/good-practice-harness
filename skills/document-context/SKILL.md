@@ -15,7 +15,7 @@ This skill describes how to document specifications under the `/context` directo
 - Create a `README.md` for each context directory to provide an overview and essential information about the context.
 - Keep context documentation up to date and review it regularly to ensure accuracy and relevance.
 - Use a consistent format and structure for documenting context to facilitate understanding and maintenance.
-- All context documentations must have an ID to uniquely identify them.
+- All context documentation records must have an ID to uniquely identify them.
 - Ensure that context IDs are consistent and follow a predefined naming convention.
 - Ensure all documentation outside the `/context` directory is consistent with the context documentation.
-- Ensure that all documented context always reflects the current skills standards and requirements.
+- Ensure that all documented context always matches the current skills standards, rules and requirements.
