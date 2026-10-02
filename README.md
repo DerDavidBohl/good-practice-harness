@@ -1,6 +1,6 @@
 # Good Practice Harness
 
-Good Practice Harness is a GitHub Copilot CLI Agent Plugin that provides a structured workflow for understanding and documenting a repository before implementing changes.
+Good Practice Harness is a GitHub Copilot CLI Agent Plugin that provides a structured workflow for turning a repository into a spec-driven repository before implementing changes. The context is the normative specification, and repository content must be based on that context.
 
 ## Skills
 

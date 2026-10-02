@@ -1,9 +1,9 @@
 ---
 name: context-coding
-description: Skill to identify and document the quality for the current context.
+description: Skill to identify and document coding standards and practices for the current context.
 ---
 
-# Quality Skill
+# Coding Skill
 
 Identify the coding standards and practices for the current context.
 
@@ -14,10 +14,10 @@ Document all gathered coding standards and decisions clearly and ensure it is ac
 ## Dependent contexts
 
 - `/context/requirements` (if the coding standards depend on specific requirements)
-- `/context/architecture` (if the coding standards depend on the architecture i. e. the used technologies and design decisions)
+- `/context/architecture` (if the coding standards depend on the architecture, such as the used technologies and design decisions)
 - `/context/user-experience` (if the coding standards depend on the user experience)
 - `/context/security` (if the coding standards depend on the security aspects)
-- `/context/quality` (if the coding standards depend on existing coding practices)
+- `/context/quality` (if coding standards depend on measurable quality goals)
 
 ## Your Documentations
 
@@ -40,3 +40,7 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - A comprehensive documentation of the coding standards for the current context.
 - Test cases and scenarios documenting how coding standards are ensured and measured.
 - A list of all coding-related diagrams and models used to represent the coding standards aspects.
+
+## Scope
+
+Focus on implementation conventions, language and framework practices, review rules, and maintainability guidance. Do not duplicate requirements, architecture decisions, quality goals, security controls, or user experience flows.

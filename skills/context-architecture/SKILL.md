@@ -37,6 +37,10 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - Architecture Decision Records (ADRs) documenting key architectural decisions and their rationale.
 - A list of all architectural diagrams and models used to represent the architecture.
 
+## Scope
+
+Document system boundaries, components, integrations, deployment structure, and architecture decisions. Do not duplicate class-level implementation details, coding standards, or security controls except where they constrain architecture.
+
 ## You do not care about 
 
 - Implementation details that are not relevant to the architectural decisions.

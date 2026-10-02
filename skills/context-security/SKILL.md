@@ -17,6 +17,8 @@ Document all gathered security information and decisions clearly and ensure it i
 - `/context/architecture` (if the security aspects depend on the architecture i. e. the used technologies and design decisions)
 - `/context/user-experience` (if the security aspects depend on the user experience)
 
+Evaluate security after requirements and architecture are available. A missing security detail blocks work only when the requested change affects a security-sensitive asset or trust boundary.
+
 ## Your Documentations
 
 Document the identified security aspects for the current context under `/context/security`.
@@ -46,3 +48,7 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - Low-level coding standards and practices unless they affect security.
 - Specific security configurations that are not relevant to the current context.
 - User experience flows unless they influence security considerations.
+
+## Scope
+
+Document intended assets, trust boundaries, threats, vulnerabilities, controls, policies, and residual risk. Do not include implementation observations, source-code references, current behavior, or conformance assessments. Do not duplicate unrelated infrastructure or application configuration.

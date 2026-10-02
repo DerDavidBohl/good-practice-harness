@@ -9,7 +9,9 @@ description: Skill to define the preferred workflow on user requests.
 
 ## 1. Get the current context
 
-- Enricht the users request with the current context information.
+- Enrich the user's request with the current context information.
+- `/context` means the `context` directory at the root of the target repository.
+- If `/context` does not exist, suggest the `onboard-repository` skill. If the user declines onboarding, continue only with explicit assumptions.
 
 ## 2. Clarify the user request
 
@@ -24,8 +26,8 @@ description: Skill to define the preferred workflow on user requests.
 ## 4. Execute the plan
 
 - Implement the agreed-upon plan or solution in this order
-  1. Update the context using the `context-*` skills.
-  2. Implement the plan in using good practices like clean code and test driven development
+  1. Update the context using the `context-*` skills in this order: `get-context`, `context-requirements`, `context-architecture`, `context-security`, `context-user-experience`, `context-quality`, `context-coding`, `document-context`.
+  2. Implement the plan using documented context and good practices such as clean code and test-driven development.
 
 ## 5. Review and iterate
 
@@ -35,7 +37,9 @@ description: Skill to define the preferred workflow on user requests.
 
 ## Exceptions
 
-- If you get an specific request for a specific context, check the previous contexts to ensure consistency and avoid redundant work.
+- If you get a specific request for a specific context, check the previous contexts to ensure consistency and avoid redundant work.
+- A dependency may be skipped only when it is not applicable and that decision is documented in the relevant context README.
+- A skill must stop when an open clarification blocks the requested work. It may continue when the clarification is non-blocking, but must state the assumption used.
 
 ## Principles
 

@@ -41,3 +41,7 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - Low-level coding standards and practices.
 - Specific security configurations unless they impact the non-technical requirements.
 - User experience flows unless they influence the non-technical requirements.
+
+## Scope
+
+Document stakeholder goals, constraints, business needs, and acceptance needs. Keep technical design, implementation conventions, and detailed interaction flows in their dedicated contexts, referencing requirements by ID.

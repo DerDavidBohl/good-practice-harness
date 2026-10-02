@@ -18,6 +18,8 @@ Document all gathered quality information and decisions clearly and ensure it is
 - `/context/user-experience` (if the quality depends on the user experience)
 - `/context/security` (if the quality depends on the security aspects)
 
+Quality is evaluated after requirements, architecture, security, and user experience context is available. Coding standards are a downstream input, not a prerequisite.
+
 ## Your Documentations
 
 Document the identified quality for the current context under `/context/quality`.
@@ -39,6 +41,10 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - A comprehensive documentation of the quality for the current context.
 - Test cases and scenarios documenting how quality is ensured and measured.
 - A list of all quality-related diagrams and models used to represent the quality aspects.
+
+## Scope
+
+Document measurable quality attributes, quality scenarios, thresholds, and how they are verified. Do not use this context for general coding standards or implementation details that have no quality impact.
 
 ## You do not care about 
 

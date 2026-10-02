@@ -39,6 +39,10 @@ Use the `document-context` skill to ensure consistent and structured documentati
 - User Experience Flows documenting the sequence of interactions and experiences for users.
 - A list of all user experience diagrams and models used to represent the user experience.
 
+## Scope
+
+Document user goals, actors, journeys, interaction flows, states, accessibility expectations, and UX acceptance needs. Do not duplicate implementation details or technical architecture.
+
 ## You do not care about 
 
 - Implementation details that do not impact the user experience.
