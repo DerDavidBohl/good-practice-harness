@@ -13,7 +13,7 @@ Keep the implementation traceable to the documented context. The normative conte
 
 Use the `get-context` skill to retrieve and utilize existing context information for the current project.
 
-Make sure to document all changes in the context before implementing them.
+Make sure to document all changes in the context before implementing them using the `context-*` and `document-context` skills.
 
 Implement changes only when they are defined by existing context specifications. Stakeholder approval is informal by default; when `context/README.md` defines a stronger approval policy, verify that policy before implementation.
 
