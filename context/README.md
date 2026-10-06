@@ -15,7 +15,7 @@ All six areas apply to this repository. Cross-area references should use stable 
 
 ## Open Clarifications
 
-- The top-level README advertises an `implement-context` skill that is not present in this checkout; its intended availability and behavior need maintainer confirmation.
+- This checkout does not include an `implement-context` skill; its intended availability and behavior need maintainer confirmation.
 - Distribution and licensing expectations are not specified; the current repository documentation says no license is declared.
 - Security expectations beyond normal local developer trust, especially for secrets and repositories from untrusted sources, are not specified.
 - Supported Copilot CLI/plugin versions and compatibility policy are not specified.

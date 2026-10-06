@@ -23,3 +23,11 @@ Context contributions must follow the repository-local context template, assign 
 Changes to plugin capabilities or metadata must keep the plugin manifest and user-facing documentation consistent with the capabilities actually intended to be provided.
 
 **Verification:** Validate manifest syntax and review documented capability names against the maintained skill set. The `implement-context` discrepancy remains open under [CLR-002](../architecture/workflow-and-boundaries.md#the-advertised-implementation-capability-needs-maintainer-confirmation).
+
+### Python is not used for repository work
+
+**ID: COD-004**
+
+Do not introduce Python for repository source code, scripts, tests, builds, or validation. Use the existing shell or PowerShell tooling, or tooling native to the project, where applicable.
+
+**Verification:** Review added or changed automation and project files to ensure Python is not required.

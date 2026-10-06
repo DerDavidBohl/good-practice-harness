@@ -14,11 +14,11 @@ The harness presents repository-context work as focused capabilities for onboard
 
 Context specifications describe intended outcomes and constraints. Repository implementation, configuration, and conformance evidence remain separate and may be used for implementation or verification only after the relevant context is established. This supports [REQ-002](../requirements/stakeholders-and-workflow.md#repository-context-is-the-decision-basis-for-changes).
 
-### The advertised implementation capability needs maintainer confirmation
+### An implementation capability remains unspecified
 
 **ID: CLR-002**
 
-Repository documentation names an `implement-context` capability, but this checkout does not provide its skill definition. Its intended availability, scope, and relationship to the make-change workflow remain unresolved. Do not infer missing implementation behavior from the name alone.
+This checkout does not provide an `implement-context` skill definition. Its intended availability, scope, and relationship to the make-change workflow remain unresolved. Do not infer missing implementation behavior from the name alone.
 
 ### Supported Copilot CLI and plugin versions need definition
 

@@ -1,6 +1,6 @@
 ---
 name: document-context
-description: Skill to document context in a structured and consistent manner. Use it when you create or update context documentation.
+description: Skill to document context in a structured and consistent manner. Use it when you create or update context documentation. I. e. when adding new requirements, decisions, standards, or clarifications.
 ---
 
 # Document Context Skill

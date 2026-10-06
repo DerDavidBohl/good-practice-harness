@@ -17,7 +17,8 @@ The plugin includes these skills:
 | `context-security` | Identify security concerns, assets, and mitigations. |
 | `context-user-experience` | Capture user experience flows and expectations. |
 | `document-context` | Keep context documentation structured and consistent. |
-| `implement-context` | Implement changes based on documented context. |
+| `make-change` | Implement requested changes using the documented repository context. |
+| `workflow` | Coordinate the preferred workflow for repository requests. |
 
 ## Install
 
@@ -37,7 +38,7 @@ Ask Copilot to use a skill by name, for example:
 Use the onboard-repository skill to document this repository.
 ```
 
-The skills write context documentation under `/context` in the target repository. The harness expects each context area to maintain a `README.md` and to reference related context where appropriate.
+The context skills maintain documentation under `/context` in the target repository. The harness expects each context area to maintain a `README.md` and to reference related context where appropriate. Use `make-change` to implement changes that are defined by the documented context.
 
 ## Plugin layout
 

@@ -1,6 +1,6 @@
 ---
 name: workflow
-description: Skill to define the preferred workflow on user requests.
+description: Skill to define the preferred workflow on user requests. Use it for every action taken within the repository.
 ---
 
 # Workflow Skill
