@@ -1,6 +1,6 @@
 ---
 name: make-change
-description: Skill to make changes in the current project context. Use it every time you need to implement modifications.
+description: Skill to make changes in the current project context. Use it whenever the functionality or behavior of the project needs to be modified.
 ---
 
 # Make Change Skill
