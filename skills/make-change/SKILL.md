@@ -7,15 +7,17 @@ description: Skill to make changes in the current project context. Use it whenev
 
 Implement the requested change using the current repository context. This may include code, configuration, infrastructure, tests, or documentation; it does not mean implementing documentation context itself.
 
-Do not begin implementation until the relevant context specification has been updated for this requested change. This is required even when existing context covers the general behavior. Use the applicable `context-*` and `document-context` skills to establish the requested intent and acceptance needs first; do not document implementation details. Resolve blocking gaps or contradictions before implementation. Non-blocking assumptions may proceed when stated clearly and recorded where relevant.
+Do not begin implementation until the relevant context specification has been updated for this requested change. This is required even when existing context covers the general behavior, unless the change is context-neutral (see below).
+
+A change is context-neutral when it preserves everything the context specifies (requirements, architecture, security, coding, quality, and user-experience specifications) and so introduces no new intent or acceptance need. Typical examples are dependency updates without behavior change, refactoring, formatting, and internal maintenance. Context-neutral changes need no context update, but must still be checked against the existing context. If the change contradicts a specification, adds or removes behavior, or changes a documented constraint, technology choice, or interface (including major or breaking dependency updates that do so), it is not context-neutral and the context update comes first. When in doubt, treat it as not context-neutral. State in the change summary that the change was treated as context-neutral and why. Use the applicable `context-*` and `document-context` skills to establish the requested intent and acceptance needs first; do not document implementation details. Resolve blocking gaps or contradictions before implementation. Non-blocking assumptions may proceed when stated clearly and recorded where relevant.
 
 Keep the implementation traceable to the documented context. The normative context remains focused on specifications while implementation behavior and configuration remain in the implementation.
 
 Use `get-context` to retrieve relevant context when this skill is invoked directly. When coordinated by `workflow`, use the context it has already established instead of repeating the same read.
 
-The required context update must precede every implementation change. Update or add the relevant specification to capture the requested change's intent and acceptance needs, maintaining the existing record where appropriate rather than duplicating it. Do not document implementation details.
+The required context update must precede every implementation change that is not context-neutral. Update or add the relevant specification to capture the requested change's intent and acceptance needs, maintaining the existing record where appropriate rather than duplicating it. Do not document implementation details.
 
-Implement changes only when they are defined by existing context specifications. Stakeholder approval is informal by default; when `context/README.md` defines a stronger approval policy, verify that policy before implementation.
+Implement changes only when they are defined by existing context specifications or are context-neutral. Stakeholder approval is informal by default; when `context/README.md` defines a stronger approval policy, verify that policy before implementation.
 
 For every change, review the relevant user-facing documentation. Update it in the same change whenever user-observable behavior, setup, configuration, interfaces, workflows, or troubleshooting changes. Do not wait for the user to explicitly request documentation. If no user-facing documentation update applies, state why in the change summary.
 
