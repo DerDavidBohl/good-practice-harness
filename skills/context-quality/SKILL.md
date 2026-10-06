@@ -48,7 +48,7 @@ Document measurable quality attributes, quality scenarios, thresholds, and how t
 
 ## Verification approach
 
-Use the repository's documented quality context as the acceptance basis. The agent reviews relevant implementation and available evidence against that context, identifies gaps or risks, and reports what was and was not verified.
+Use the repository's documented quality context as the acceptance basis. Run relevant checks using the repository's established practices, review implementation and available evidence against that context, identify gaps or risks, and report what was and was not verified, including skipped checks and limitations.
 
 Keep this skill generic: inspect and use the repository's established verification practices rather than assuming a language, framework, command, or test suite. During onboarding, identify useful repeatable checks and create or adapt repository-local verification scripts only when they add value. Keep scripts and tool-specific instructions outside `/context`; keep quality expectations in context records. The agent remains responsible for interpreting results and checking outcomes that scripts cannot establish.
 

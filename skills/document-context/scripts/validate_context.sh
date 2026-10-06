@@ -78,12 +78,54 @@ while IFS= read -r -d '' file; do
   fi
   while IFS= read -r record_id; do
     [[ -n "$record_id" ]] || continue
-    if [[ -n "${ids[$record_id]:-}" && "${ids[$record_id]}" != "$file" ]]; then
+    if [[ -n "${ids[$record_id]:-}" ]]; then
       error "duplicate record ID $record_id: ${ids[$record_id]} and $file"
     else
       ids[$record_id]="$file"
     fi
-  done < <(printf '%s\n' "$file_ids" | sort -u)
+  done < <(printf '%s\n' "$file_ids" | sort)
+done < <(find "$context_dir" -type f -name '*.md' -print0)
+
+while IFS= read -r -d '' source_file; do
+  while IFS= read -r markdown_link; do
+    target="${markdown_link##*](}"
+    target="${target%)}"
+    target="${target%%[[:space:]]*}"
+    target="${target#<}"
+    target="${target%>}"
+    [[ -n "$target" || "$markdown_link" == *"](#"* ]] || continue
+    [[ "$target" == http://* || "$target" == https://* || "$target" == mailto:* ]] && continue
+
+    fragment=""
+    if [[ "$target" == *#* ]]; then
+      fragment="${target#*#}"
+      target="${target%%#*}"
+    fi
+
+    if [[ -n "$target" ]]; then
+      target_file="$(dirname "$source_file")/$target"
+      if [[ ! -f "$target_file" ]]; then
+        error "missing context link target in $source_file: $target"
+        continue
+      fi
+    else
+      target_file="$source_file"
+    fi
+
+    if [[ -n "$fragment" ]]; then
+      fragment_found=false
+      while IFS= read -r heading; do
+        slug="$(printf '%s' "$heading" | sed -E 's/^#+[[:space:]]*//; s/`//g' | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9_ -]//g; s/[[:space:]]+/-/g; s/-+/-/g; s/^-|-$//g')"
+        if [[ "$slug" == "$fragment" ]]; then
+          fragment_found=true
+          break
+        fi
+      done < <(grep -E '^#{1,6}[[:space:]]+' "$target_file" || true)
+      if [[ "$fragment_found" != true ]]; then
+        error "missing context link anchor in $source_file: $target#$fragment"
+      fi
+    fi
+  done < <(grep -oE '\[[^]]*\]\([^)]*\)' "$source_file" || true)
 done < <(find "$context_dir" -type f -name '*.md' -print0)
 
 if (( errors > 0 )); then

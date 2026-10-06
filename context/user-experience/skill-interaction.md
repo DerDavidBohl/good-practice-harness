@@ -19,3 +19,11 @@ When stakeholder intent is ambiguous, users should be asked concise, relevant qu
 **ID: UX-003**
 
 Context documentation should provide an overview, scope, and direct navigation to related specifications. Records should explain intent in readable prose and identify related decisions without requiring readers to reconstruct a workflow from implementation details.
+
+### Onboarding selects context areas with a consistent relevance test
+
+**ID: UX-004**
+
+During onboarding, an area is applicable when it contains requirements, decisions, risks, quality expectations, or user flows relevant to the repository. Every area marked `N/A` includes a concise reason so users can understand the scope decision.
+
+**Acceptance:** The onboarding summary identifies applicable areas and gives a reason for each area marked `N/A`.

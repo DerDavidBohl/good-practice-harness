@@ -32,13 +32,19 @@ After installation, start a new Copilot CLI session or restart the current sessi
 
 ## Use
 
-Ask Copilot to use a skill by name, for example:
+For a repository without `/context`, start by onboarding:
 
 ```text
 Use the onboard-repository skill to document this repository.
 ```
 
-The context skills maintain documentation under `/context` in the target repository. The harness expects each context area to maintain a `README.md` and to reference related context where appropriate. Use `make-change` to implement changes that are defined by the documented context.
+For ordinary repository requests, use the workflow orchestrator:
+
+```text
+Use the workflow skill to fix the validation error in the configuration parser.
+```
+
+`workflow` reads the relevant repository context, asks only for blocking clarifications, and coordinates implementation and verification through `make-change`. Focused skills can also be invoked directly for scoped context work. If onboarding is declined or no relevant context exists, implementation does not proceed until that context is established. Context updates record changes to intended behavior or constraints, not implementation details or work already covered by existing records.
 
 ## Plugin layout
 
@@ -55,12 +61,13 @@ skills/
 
 ## Development
 
-Keep skill names lowercase and hyphenated, and keep the `name` and `description` frontmatter fields synchronized with the directory's purpose. Validate the manifest after changes:
+Keep skill names lowercase and hyphenated, and keep the `name` and `description` frontmatter fields synchronized with the directory's purpose. Run the harness checks after changes (requires `jq`):
 
 ```bash
-python -m json.tool plugin.json
+jq empty plugin.json
+bash skills/document-context/scripts/test_harness.sh
 ```
 
 ## License
 
-No license is currently declared for this repository.# good-practice-harness
+No license is currently declared for this repository.

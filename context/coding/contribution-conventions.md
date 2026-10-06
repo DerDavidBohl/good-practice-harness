@@ -22,7 +22,7 @@ Context contributions must follow the repository-local context template, assign 
 
 Changes to plugin capabilities or metadata must keep the plugin manifest and user-facing documentation consistent with the capabilities actually intended to be provided.
 
-**Verification:** Validate manifest syntax and review documented capability names against the maintained skill set. The `implement-context` discrepancy remains open under [CLR-002](../architecture/workflow-and-boundaries.md#the-advertised-implementation-capability-needs-maintainer-confirmation).
+**Verification:** Validate manifest syntax and review documented capability names against the maintained skill set. The `make-change` capability owns implementation; the resolved decision is recorded under [CLR-002](../architecture/workflow-and-boundaries.md#make-change-is-the-implementation-capability).
 
 ### Python is not used for repository work
 

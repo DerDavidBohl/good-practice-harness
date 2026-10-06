@@ -78,16 +78,59 @@ $recordFiles = Get-ChildItem -LiteralPath $ContextDir -Recurse -File -Filter "*.
 $records = @{}
 
 foreach ($file in $recordFiles) {
-    $recordIds = @(Get-RecordIds $file.FullName | Sort-Object -Unique)
+    $recordIds = @(Get-RecordIds $file.FullName | Sort-Object)
     if ($recordIds.Count -eq 0) {
         Add-ValidationError "record file has no context record ID: $($file.FullName)"
         continue
     }
     foreach ($recordId in $recordIds) {
-        if ($records.ContainsKey($recordId) -and $records[$recordId] -ne $file.FullName) {
+        if ($records.ContainsKey($recordId)) {
             Add-ValidationError "duplicate record ID ${recordId}: $($records[$recordId]) and $($file.FullName)"
         } else {
             $records[$recordId] = $file.FullName
+        }
+    }
+}
+
+$markdownFiles = Get-ChildItem -LiteralPath $ContextDir -Recurse -File -Filter "*.md"
+foreach ($sourceFile in $markdownFiles) {
+    $content = Get-Content -LiteralPath $sourceFile.FullName -Raw
+    foreach ($match in [regex]::Matches($content, '\[[^\]]*\]\(([^)]*)\)')) {
+        $target = ($match.Groups[1].Value -split '\s+', 2)[0].Trim([char[]]@('<', '>'))
+        if ($target -match '^(https?://|mailto:)') {
+            continue
+        }
+
+        $targetParts = $target -split '#', 2
+        $relativePath = $targetParts[0]
+        $fragment = if ($targetParts.Count -gt 1) { $targetParts[1] } else { '' }
+        $targetPath = if ($relativePath) {
+            Join-Path $sourceFile.DirectoryName $relativePath
+        } else {
+            $sourceFile.FullName
+        }
+
+        if (-not (Test-Path -LiteralPath $targetPath -PathType Leaf)) {
+            Add-ValidationError "missing context link target in $($sourceFile.FullName): $relativePath"
+            continue
+        }
+
+        if ($fragment) {
+            $headingFound = $false
+            foreach ($heading in (Get-Content -LiteralPath $targetPath | Where-Object { $_ -match '^#{1,6}\s+' })) {
+                $slug = $heading -replace '^#+\s*', ''
+                $slug = $slug -replace '`', ''
+                $slug = $slug.ToLowerInvariant() -replace '[^a-z0-9_ -]', ''
+                $slug = $slug -replace '\s+', '-' -replace '-+', '-'
+                $slug = $slug.Trim('-')
+                if ($slug -eq $fragment) {
+                    $headingFound = $true
+                    break
+                }
+            }
+            if (-not $headingFound) {
+                Add-ValidationError "missing context link anchor in $($sourceFile.FullName): $relativePath#$fragment"
+            }
         }
     }
 }

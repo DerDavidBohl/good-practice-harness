@@ -68,14 +68,14 @@ The validator must also confirm that README files contain no record IDs and that
 
 Temporary working questions may remain outside the normative records. When a clarification becomes part of the normative context, store it in a separate Markdown record file. A skill pauses when an unresolved clarification blocks its requested work and proceeds with an explicit assumption when it does not.
 
-Approval is informal by default. Repositories that need stronger governance may define an approval policy in `context/README.md`; `implement-context` must follow that repository-specific policy.
+Approval is informal by default. Repositories that need stronger governance may define an approval policy in `context/README.md`; `make-change` must follow that repository-specific policy.
 
 ## Normative record example
 
 ```md
 ### Container execution must be isolated
 
-**ID: SEC-004*
+**ID: SEC-004**
 
 **Status:** Proposed.
 

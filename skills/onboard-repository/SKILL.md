@@ -7,7 +7,7 @@ description: Skill to onboard a repository to this harness
 
 Use all applicable `context-*` skills to gather and document the repository in this order: `get-context`, `context-requirements`, `context-architecture`, `context-security`, `context-user-experience`, `context-quality`, `context-coding`, `document-context`.
 
-Create the `context` directory and a `README.md` for each applicable context directory. During onboarding, create repository-local templates inside `context` for the context areas the repository uses. These templates are starting points for future records, not harness-wide templates.
+Treat a context area as applicable when it contains requirements, decisions, risks, quality expectations, or user flows relevant to the repository. Create the `context` directory and a `README.md` for each applicable area. Mark every non-applicable area `N/A` with a concise reason in the root context README. During onboarding, create repository-local templates inside `context` for applicable areas. These templates are starting points for future records, not harness-wide templates.
 
 Use each README as an index and overview containing links, scope, and navigation. Group related requirements, decisions, standards, quality attributes, security records, UX records, and clarifications into a small number of descriptive Markdown files by coherent topic under the applicable context directory. Use a separate file for a record when it is unusually large or independently maintained. Keep context records and record IDs in the topic files.
 

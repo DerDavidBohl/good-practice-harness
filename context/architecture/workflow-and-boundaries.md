@@ -4,7 +4,7 @@
 
 **ID: ADR-001**
 
-The harness presents repository-context work as focused capabilities for onboarding, requirements, architecture, security, user experience, quality, coding, and context documentation. The workflow coordinates these capabilities in dependency order so later context can rely on earlier decisions.
+The `workflow` capability coordinates the default repository-request path. It reads relevant context, resolves blocking questions, and delegates implementation to `make-change`; focused context skills own their named documentation areas, and `make-change` owns implementation and verification. Users may invoke a focused capability directly for scoped work, which follows the same applicable context and verification rules without repeating unrelated steps.
 
 **Rationale:** Focused responsibilities make the workflow easier to apply and maintain while retaining a coherent decision process.
 
@@ -22,11 +22,13 @@ Harness skills guide agent-led verification without assuming a repository's lang
 
 Context specifications describe intended outcomes and constraints. Repository implementation, configuration, and conformance evidence remain separate and may be used for implementation or verification only after the relevant context is established. This supports [REQ-002](../requirements/stakeholders-and-workflow.md#repository-context-is-the-decision-basis-for-changes).
 
-### An implementation capability remains unspecified
+### `make-change` is the implementation capability
 
 **ID: CLR-002**
 
-This checkout does not provide an `implement-context` skill definition. Its intended availability, scope, and relationship to the make-change workflow remain unresolved. Do not infer missing implementation behavior from the name alone.
+**Status:** Resolved.
+
+There is no separate `implement-context` capability in this harness. `make-change` is the implementation capability and follows any repository-specific approval policy documented in `context/README.md`.
 
 ### Supported Copilot CLI and plugin versions need definition
 

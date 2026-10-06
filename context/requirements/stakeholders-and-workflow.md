@@ -18,9 +18,9 @@ Repository work governed by the harness must be based on documented context spec
 
 **ID: REQ-003**
 
-Before implementation begins, context relevant to the requested change must be sufficiently complete, internally consistent, and validated. If an ambiguity blocks the work, the context must be clarified first; non-blocking gaps must remain visible as assumptions or open clarifications.
+Before implementation begins, the context relevant to the requested change must be sufficiently complete, internally consistent, and validated. Update context records when the requested behavior, constraints, or acceptance needs change; do not add records for implementation details or work already covered by existing context. If relevant context is missing or a blocking ambiguity remains, clarify and document it before implementation. If no repository context exists and the user declines onboarding, stop before implementation and explain what context is needed. Non-blocking gaps may remain open when their assumptions are stated.
 
-**Verification:** The agent reviews relevant context for coverage, consistency, and unresolved blockers before implementation proceeds. Any repository-specific verification checks established during onboarding are run when relevant. A context structure validator may support this review but does not replace it.
+**Verification:** The agent reviews relevant context for coverage, consistency, and unresolved blockers before implementation proceeds. Relevant repository-specific checks are run after implementation, and their results and limitations are reported. A context structure validator may support context review but does not replace it.
 
 ### User-facing documentation stays current with changes
 

@@ -20,7 +20,7 @@ The context relevant to a requested change must express its intended behavior, c
 
 **ID: QUA-004**
 
-The agent determines how to verify a repository from its documented quality needs and existing project conventions. Onboarding may create or adapt repository-local verification scripts when repeatable checks are useful; the harness skills remain generic and do not prescribe a universal toolchain or test suite.
+The agent determines how to verify a requested change from the repository's documented quality needs and existing project conventions. Relevant checks are run after implementation, and the agent reports their results, skipped checks, and remaining limitations. Onboarding may create or adapt repository-local verification scripts when repeatable checks are useful; the harness skills remain generic and do not prescribe a universal toolchain or test suite.
 
 **Verification:** The agent checks that verification guidance and any generated scripts match the repository's documented quality needs, use its established tools, and remain outside normative context records.
 

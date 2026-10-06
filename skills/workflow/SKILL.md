@@ -1,6 +1,6 @@
 ---
 name: workflow
-description: Skill to define the preferred workflow on user requests. Use it for every action taken within the repository.
+description: Orchestrate repository requests using relevant context, focused skills, implementation, and verification.
 ---
 
 # Workflow Skill
@@ -11,35 +11,35 @@ description: Skill to define the preferred workflow on user requests. Use it for
 
 - Enrich the user's request with the current context information.
 - `/context` means the `context` directory at the root of the target repository.
-- If `/context` does not exist, suggest the `onboard-repository` skill. If the user declines onboarding, continue only with explicit assumptions.
+- If `/context` does not exist, suggest `onboard-repository`. If the user declines, do not implement; explain that repository changes require documented context and offer to help establish the relevant minimum context.
 
 ## 2. Clarify the user request
 
-- Ensure that the user's request is clearly understood and unambiguous.
-- Seek any necessary clarifications from the user to avoid misunderstandings.
+- Ask concise questions when ambiguity blocks the requested work.
+- State reasonable assumptions for non-blocking gaps and keep unrelated open questions visible without delaying the request.
 
 ## 3. Present and refine the plan
 
-- Present the proposed plan or solution to the user.
-- Gather feedback and make necessary adjustments to ensure the plan meets the user's needs and expectations.
+- Scale planning to the request. Share a concise approach for straightforward work; seek feedback before substantial, risky, or materially ambiguous work.
 
 ## 4. Execute the plan
 
-- Implement the agreed-upon plan or solution in this order
-  1. Update the context using the `context-*` skills in this order: `get-context`, `context-requirements`, `context-architecture`, `context-security`, `context-user-experience`, `context-quality`, `context-coding`, `document-context`.
-  2. Implement the plan using documented context and good practices such as clean code and test-driven development. Review relevant user-facing documentation for every change, update it in the same change when user-observable behavior or usage changes, and explain in the change summary when no documentation update applies (REQ-004).
+- Carry out the request in this order:
+  1. Use `get-context` to read specifications relevant to the request.
+  2. Update only context records whose intended behavior, constraints, or acceptance needs are new or changed. Use the applicable `context-*` skills and `document-context`; do not create context records for implementation details or work already covered by existing records.
+  3. Delegate implementation to `make-change`, which follows the documented context and any applicable approval policy.
+  4. Review relevant user-facing documentation and update it in the same change when user-observable behavior or usage changes (REQ-004).
+  5. Run relevant repository-specific quality checks and report results, skipped checks, and limitations.
 
 ## 5. Review and iterate
 
-- After executing the plan, review the outcomes and gather feedback from the user.
-- Identify any areas for improvement and iterate on the plan as necessary to achieve the desired results.
+- Review the implementation and verification evidence, then summarize the outcome and any remaining limitations. Ask for feedback when it would affect the result; incorporate follow-up requests through the same workflow.
 
 
 ## Exceptions
 
-- If you get a specific request for a specific context, check the previous contexts to ensure consistency and avoid redundant work.
-- A dependency may be skipped only when it is not applicable and that decision is documented in the relevant context README.
-- A skill must stop when an open clarification blocks the requested work. It may continue when the clarification is non-blocking, but must state the assumption used.
+- For a focused request, inspect only relevant context areas and their dependencies; explain any skipped verification that would otherwise apply.
+- Stop when missing or contradictory relevant context blocks the requested work. Continue with non-blocking assumptions stated clearly.
 
 ## Principles
 
