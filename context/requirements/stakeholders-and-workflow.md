@@ -20,7 +20,15 @@ Repository work governed by the harness must be based on documented context spec
 
 Before implementation begins, context relevant to the requested change must be sufficiently complete, internally consistent, and validated. If an ambiguity blocks the work, the context must be clarified first; non-blocking gaps must remain visible as assumptions or open clarifications.
 
-**Verification:** The relevant context is reviewed for coverage and unresolved blockers, and the repository context validator passes before implementation proceeds.
+**Verification:** The agent reviews relevant context for coverage, consistency, and unresolved blockers before implementation proceeds. Any repository-specific verification checks established during onboarding are run when relevant. A context structure validator may support this review but does not replace it.
+
+### User-facing documentation stays current with changes
+
+**ID: REQ-004**
+
+Every change must include a review of the relevant user-facing documentation. When a change affects user-observable behavior, setup, configuration, interfaces, workflows, or troubleshooting, update the applicable user documentation in the same change. If no user-facing documentation update applies, state the reason in the change summary.
+
+**Rationale:** Users should be able to rely on the documentation to understand and use the current behavior of the repository.
 
 ### Open distribution terms require maintainer clarification
 

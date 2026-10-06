@@ -8,6 +8,14 @@ The harness presents repository-context work as focused capabilities for onboard
 
 **Rationale:** Focused responsibilities make the workflow easier to apply and maintain while retaining a coherent decision process.
 
+### Verification guidance stays generic while onboarding tailors checks
+
+**ID: ADR-003**
+
+Harness skills guide agent-led verification without assuming a repository's languages, frameworks, or tooling. Onboarding may create or adapt repository-local verification scripts from that repository's documented quality needs and existing conventions. Such scripts are implementation material, not normative context.
+
+**Rationale:** This keeps the harness reusable across repositories while making repeatable verification practical for each onboarded project. This supports [QUA-004](../quality/context-readiness.md#verification-is-agent-led-and-repository-specific).
+
 ### Normative context is separate from implementation material
 
 **ID: ADR-002**

@@ -23,6 +23,10 @@ All records created by onboarding express intended behavior, requirements, decis
 
 When creating repository-local templates, structure records around their relationship to existing context specifications. Keep implementation-derived fields outside the normative template.
 
+## Repository verification
+
+Use the documented quality context to understand how the repository should be verified. Inspect its existing tests, checks, scripts, and conventions, then identify useful repeatable checks with the agent. Create or adapt repository-local verification scripts only when they provide value for that repository; do not impose a universal toolchain or test suite. Keep scripts and tool-specific instructions outside `/context`, and keep the quality expectations they verify in context records. The agent reviews the results and reports uncovered expectations, failures, and limitations.
+
 Onboarding is complete only when:
 
 - `context/README.md` exists and links to each applicable context area.
@@ -33,6 +37,8 @@ Onboarding is complete only when:
 - Every context reference resolves to an existing record or file.
 - Each non-applicable context area is explicitly marked `N/A` with a reason.
 - Open assumptions, conflicts, and blocking clarifications are listed.
-- The context validator passes, or its remaining findings are reported to the user.
+- The agent reviews context structure, references, completeness, and consistency; the bundled context validator may be used as a supporting structural check.
+- Repository-specific verification needs are identified, and any useful scripts are created or adapted outside `/context`.
+- Verification results and remaining limitations are reported to the user.
 
 If a clarification blocks onboarding, stop at that context and report what is blocked. Continue with independent, non-blocked contexts when possible.

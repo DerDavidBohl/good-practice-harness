@@ -8,4 +8,4 @@ Architecture includes the plugin's skill-based workflow and its separation of no
 
 ## Records
 
-- [Workflow and boundaries](workflow-and-boundaries.md): capability organization, context ownership, and an open compatibility clarification.
+- [Workflow and boundaries](workflow-and-boundaries.md): capability organization, context ownership, verification boundaries, and an open compatibility clarification.

@@ -8,4 +8,4 @@ Quality context covers structural validity, traceability, readability, and compl
 
 ## Records
 
-- [Context readiness and verification](context-readiness.md): acceptance conditions and verification expectations.
+- [Context readiness and verification](context-readiness.md): acceptance conditions, agent-led verification, and repository-specific checks.

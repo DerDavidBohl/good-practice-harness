@@ -62,7 +62,7 @@ Cross-cutting information belongs in the narrowest applicable context and is ref
 
 ## Completion and validation
 
-Before declaring documentation complete, verify that the context README exists, applicable areas have README files and repository-local templates, IDs are unique and correctly formatted, and references resolve. Use the bundled `scripts/validate_context.sh` on Bash or `scripts/Validate-Context.ps1` on PowerShell from this skill directory. Pass the repository's additional prefix when it uses one.
+Before declaring documentation complete, the agent reviews that the context README exists, applicable areas have README files and repository-local templates, IDs are unique and correctly formatted, and references resolve. The bundled `scripts/validate_context.sh` on Bash or `scripts/Validate-Context.ps1` on PowerShell may be used as a supporting structural check; passing either validator does not replace agent review. Pass the repository's additional prefix when using a validator and the repository uses one.
 
 The validator must also confirm that README files contain no record IDs and that every non-template Markdown record file contains at least one record ID. A record file may contain multiple related records.
 

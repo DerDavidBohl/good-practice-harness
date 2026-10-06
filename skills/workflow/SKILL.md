@@ -27,7 +27,7 @@ description: Skill to define the preferred workflow on user requests. Use it for
 
 - Implement the agreed-upon plan or solution in this order
   1. Update the context using the `context-*` skills in this order: `get-context`, `context-requirements`, `context-architecture`, `context-security`, `context-user-experience`, `context-quality`, `context-coding`, `document-context`.
-  2. Implement the plan using documented context and good practices such as clean code and test-driven development.
+  2. Implement the plan using documented context and good practices such as clean code and test-driven development. Review relevant user-facing documentation for every change, update it in the same change when user-observable behavior or usage changes, and explain in the change summary when no documentation update applies (REQ-004).
 
 ## 5. Review and iterate
 

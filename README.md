@@ -9,11 +9,11 @@ The plugin includes these skills:
 | Skill | Purpose |
 | --- | --- |
 | `get-context` | Find and read the current repository context. |
-| `onboard-repository` | Build a complete context for an existing repository. |
+| `onboard-repository` | Build context and identify or create repository-specific verification checks. |
 | `context-requirements` | Capture stakeholders and non-technical requirements. |
 | `context-architecture` | Identify and document architecture and decisions. |
 | `context-coding` | Define coding standards and practices. |
-| `context-quality` | Define quality goals, checks, and scenarios. |
+| `context-quality` | Define quality goals and guide agent-led, repository-specific verification. |
 | `context-security` | Identify security concerns, assets, and mitigations. |
 | `context-user-experience` | Capture user experience flows and expectations. |
 | `document-context` | Keep context documentation structured and consistent. |
