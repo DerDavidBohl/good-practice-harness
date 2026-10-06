@@ -17,6 +17,8 @@ Be accurate and ensure all relevant intended context is captured and documented 
 
 The purpose of onboarding is to establish the normative specification for a spec-driven repository. Existing context specifications are the sole decision basis for repository work. Define new or revised records through the context workflow and keep implementation material outside the normative context.
 
+Onboarding establishes the initial context only. After onboarding, every implementation change must be preceded by an update to the relevant context specification, including changes whose general behavior is already documented. Capture the requested intent and acceptance needs, not implementation details.
+
 Represent decisions and requirements defined by the context specifications. When the context is incomplete or ambiguous, request clarification and update the specifications before relying on the result. Leave the context incomplete when clarification is unavailable, and keep implementation behavior separate from requirements.
 
 All records created by onboarding express intended behavior, requirements, decisions, constraints, quality goals, security expectations, or user experience expectations. They focus on the specification rather than implementation observations, conformance assessments, source-code references, file paths, class names, command names, or configuration values.

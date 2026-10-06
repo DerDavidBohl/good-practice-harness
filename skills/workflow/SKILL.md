@@ -26,9 +26,9 @@ description: Orchestrate repository requests using relevant context, focused ski
 
 - Carry out the request in this order:
   1. Use `get-context` to read specifications relevant to the request.
-  2. Update only context records whose intended behavior, constraints, or acceptance needs are new or changed. Use the applicable `context-*` skills and `document-context`; do not create context records for implementation details or work already covered by existing records.
-  3. Delegate implementation to `make-change`, which follows the documented context and any applicable approval policy.
-  4. Review relevant user-facing documentation and update it in the same change when user-observable behavior or usage changes (REQ-004).
+  2. Update the relevant context specification for every requested implementation change, before editing implementation artifacts. Use the applicable `context-*` skills and `document-context` to capture the requested intent and acceptance needs, even when the general behavior is already covered. Do not document implementation details.
+  3. Delegate implementation to `make-change` only after the context update is complete; it follows the updated context and any applicable approval policy.
+  4. Review relevant user-facing documentation and update it in the same change when user-observable behavior or usage changes.
   5. Run relevant repository-specific quality checks and report results, skipped checks, and limitations.
 
 ## 5. Review and iterate

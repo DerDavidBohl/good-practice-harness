@@ -11,6 +11,6 @@ If the directory does not exist, suggest using `onboard-repository`. If onboardi
 
 Read the context index and its linked specifications to gather the current decision basis. Repository documentation can help locate context specifications and clarify their organization.
 
-Existing context specifications are the decision basis for repository work. User or stakeholder input that changes intended behavior, constraints, or acceptance needs enters that basis by updating the relevant specifications first. Do not create context records for implementation details or work already covered by existing specifications. When relevant context is missing or contradictory, resolve it before implementation; unrelated gaps do not block the request.
+Existing context specifications are the decision basis for repository work. Before every implementation change, update the relevant specification to capture the intent and acceptance needs for that requested change, even when existing context covers the general behavior. Do not document implementation details or duplicate records; revise the relevant record where appropriate. When relevant context is missing or contradictory, resolve it before implementation; unrelated gaps do not block the request.
 
 At minimum, inspect the context index and all specifications relevant to the request. Source code, tests, package manifests, and configuration belong to implementation and verification work after the context specifications are established.

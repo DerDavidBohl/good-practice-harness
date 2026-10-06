@@ -18,9 +18,9 @@ Repository work governed by the harness must be based on documented context spec
 
 **ID: REQ-003**
 
-Before implementation begins, the context relevant to the requested change must be sufficiently complete, internally consistent, and validated. Update context records when the requested behavior, constraints, or acceptance needs change; do not add records for implementation details or work already covered by existing context. If relevant context is missing or a blocking ambiguity remains, clarify and document it before implementation. If no repository context exists and the user declines onboarding, stop before implementation and explain what context is needed. Non-blocking gaps may remain open when their assumptions are stated.
+Every implementation change must be preceded by an update to the relevant context specifications. This applies even when existing context already covers the general behavior: update or add a specification first to capture the intent and acceptance needs for the requested change. The context update must not describe implementation details. Before implementation begins, the relevant context must be sufficiently complete, internally consistent, and validated. If relevant context is missing or a blocking ambiguity remains, clarify and document it before implementation. If no repository context exists and the user declines onboarding, stop before implementation and explain what context is needed. Non-blocking gaps may remain open when their assumptions are stated.
 
-**Verification:** The agent reviews relevant context for coverage, consistency, and unresolved blockers before implementation proceeds. Relevant repository-specific checks are run after implementation, and their results and limitations are reported. A context structure validator may support context review but does not replace it.
+**Verification:** For each implementation change, the agent first updates the relevant context and reviews it for coverage, consistency, and unresolved blockers before editing implementation artifacts. Relevant repository-specific checks are run after implementation, and their results and limitations are reported. A context structure validator may support context review but does not replace it.
 
 ### User-facing documentation stays current with changes
 
@@ -29,6 +29,14 @@ Before implementation begins, the context relevant to the requested change must 
 Every change must include a review of the relevant user-facing documentation. When a change affects user-observable behavior, setup, configuration, interfaces, workflows, or troubleshooting, update the applicable user documentation in the same change. If no user-facing documentation update applies, state the reason in the change summary.
 
 **Rationale:** Users should be able to rely on the documentation to understand and use the current behavior of the repository.
+
+### Skills do not cite individual specification records
+
+**ID: REQ-005**
+
+Skill instructions must not cite individual repository specification records by ID. They may state the applicable guidance directly, while the specification remains the authoritative source.
+
+**Verification:** Search all `SKILL.md` files for citations matching the repository's record ID prefixes and confirm none point to individual specification records.
 
 ### Open distribution terms require maintainer clarification
 
