@@ -27,3 +27,11 @@ Context documentation should provide an overview, scope, and direct navigation t
 During onboarding, an area is applicable when it contains requirements, decisions, risks, quality expectations, or user flows relevant to the repository. Every area marked `N/A` includes a concise reason so users can understand the scope decision.
 
 **Acceptance:** The onboarding summary identifies applicable areas and gives a reason for each area marked `N/A`.
+
+### Context maintenance presents findings and changes clearly
+
+**ID: UX-005**
+
+When users ask to review or update repository context, the capability should identify the relevant context areas, summarize gaps or contradictions, and report what it changed and how it verified the result. It should preserve established intent and repository-specific workflows, avoid unrelated rewrites, and surface blocking questions or assumptions instead of silently inventing requirements.
+
+**Acceptance:** Users can see which context areas were reviewed or changed, understand the reason for each update, and identify remaining assumptions, blockers, or validation limitations.

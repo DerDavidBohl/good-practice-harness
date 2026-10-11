@@ -17,6 +17,7 @@ The plugin includes these skills:
 | `context-security` | Identify security concerns, assets, and mitigations. |
 | `context-user-experience` | Capture user experience flows and expectations. |
 | `document-context` | Keep context documentation structured and consistent. |
+| `maintain-context` | Review and update repository context specifications for completeness, consistency, and traceability. |
 | `make-change` | Implement requested changes using the documented repository context. |
 | `workflow` | Coordinate the preferred workflow for repository requests. |
 
@@ -42,6 +43,12 @@ For ordinary repository requests, use the workflow orchestrator:
 
 ```text
 Use the workflow skill to fix the validation error in the configuration parser.
+```
+
+To review or maintain repository context:
+
+```text
+Use the maintain-context skill to review and update this repository's context.
 ```
 
 `workflow` reads the relevant repository context, asks only for blocking clarifications, and coordinates implementation and verification through `make-change`. Focused skills can also be invoked directly for scoped context work. If onboarding is declined or no relevant context exists, implementation does not proceed until that context is established. After onboarding, every implementation change must be preceded by an update to the relevant context specification, even when the general behavior is already documented. Context updates capture intent and acceptance needs, not implementation details. Context-neutral changes, which preserve everything the context specifies (for example dependency updates without behavior change, refactoring, or formatting), are exempt; the change summary states why.

@@ -43,3 +43,11 @@ Skill instructions must not cite individual repository specification records by 
 **ID: CLR-001**
 
 The repository does not specify licensing or distribution expectations. This remains open for maintainers and does not block context documentation, but changes that establish or communicate distribution terms require clarification first.
+
+### Context maintenance keeps repository specifications coherent and actionable
+
+**ID: REQ-006**
+
+Maintainers need a reusable capability to review and maintain the repository's normative context. It identifies relevant gaps, contradictions, stale references, and structural or traceability problems, then updates the appropriate context specifications to reflect confirmed stakeholder intent and acceptance needs. It must preserve the distinction between intended requirements and implementation observations, use the focused context skills and `document-context` conventions, and surface blocking questions rather than silently inventing requirements. It does not audit or update agent skills for platform conformance.
+
+**Rationale:** Context is the decision basis for repository work; keeping it coherent and sufficiently complete helps users apply the harness reliably without turning implementation behavior into an undocumented requirement.

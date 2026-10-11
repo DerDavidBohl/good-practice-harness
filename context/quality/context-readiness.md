@@ -29,3 +29,11 @@ The agent determines how to verify a requested change from the repository's docu
 **ID: QUA-003**
 
 Related records should be grouped by coherent topic and written for readers rather than optimized as database fields. Each record must remain independently understandable and traceable by a stable ID.
+
+### Context maintenance preserves specification quality and traceability
+
+**ID: QUA-005**
+
+Context maintenance reviews applicable specifications for completeness, consistency, stable record identity, resolved references, and alignment with confirmed intent. It preserves context as the normative decision basis, distinguishes requirements and acceptance needs from implementation details, and uses the applicable context-area skills and documentation conventions when making updates. Structural validation supports but does not replace a manual review.
+
+**Verification:** Confirm the review covers the relevant context areas, identifies blocking gaps or contradictions, checks IDs and references, and reports updates, validation results, assumptions, and unresolved gaps.
