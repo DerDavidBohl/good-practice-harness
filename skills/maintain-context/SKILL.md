@@ -19,7 +19,6 @@ Review and, when requested, update the repository's normative context while pres
 
 ## Boundaries
 
-- This capability maintains repository context; it does not audit or update agent skills for format or host-platform conformance.
 - Do not make implementation changes as part of context maintenance. Use `workflow` and `make-change` for implementation requests after the relevant context has been established.
 - Keep context focused on requirements, decisions, constraints, quality goals, security expectations, and user experience expectations. Implementation and verification details remain outside normative context.
 - Use applicable context-area skills to establish the intent and acceptance needs for requested changes, even when existing context covers the general topic.

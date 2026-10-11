@@ -35,6 +35,9 @@ description: Orchestrate repository requests using relevant context, focused ski
 
 - Review the implementation and verification evidence, then summarize the outcome and any remaining limitations. Ask for feedback when it would affect the result; incorporate follow-up requests through the same workflow.
 
+## 6. Bonus: Maintain the repositories context
+
+- When making changes, consider whether the repository's context needs to be updated to reflect the new state. Use the `maintain-context` skill to review and update the context as necessary, ensuring that all changes are traceable and consistent with the established repository norms.
 
 ## Exceptions
 
