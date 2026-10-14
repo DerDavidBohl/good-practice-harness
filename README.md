@@ -77,4 +77,4 @@ bash skills/document-context/scripts/test_harness.sh
 
 ## License
 
-No license is currently declared for this repository.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for the full text.

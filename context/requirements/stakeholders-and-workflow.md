@@ -42,7 +42,17 @@ Skill instructions must not cite individual repository specification records by 
 
 **ID: CLR-001**
 
-The repository does not specify licensing or distribution expectations. This remains open for maintainers and does not block context documentation, but changes that establish or communicate distribution terms require clarification first.
+**Status:** Resolved.
+
+The maintainer clarified that the repository is distributed under the MIT License. See [REQ-007](#repository-distribution-uses-the-mit-license).
+
+### Repository distribution uses the MIT License
+
+**ID: REQ-007**
+
+The repository's distribution terms are the MIT License, and the license terms must be included with the repository so users can identify the permissions and conditions for use, modification, and redistribution.
+
+**Verification:** Confirm the repository contains the MIT License text and presents a clear link to it in the project documentation.
 
 ### Context maintenance keeps repository specifications coherent and actionable
 
