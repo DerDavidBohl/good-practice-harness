@@ -24,3 +24,5 @@ Implement changes only when they are defined by existing context specifications 
 For every change, review the relevant user-facing documentation. Update it in the same change whenever user-observable behavior, setup, configuration, interfaces, workflows, or troubleshooting changes. Do not wait for the user to explicitly request documentation. If no user-facing documentation update applies, state why in the change summary.
 
 Run the relevant checks established by the repository's quality context and conventions. Report the checks run and their results, plus any skipped checks or limitations. Do not treat a context structure validator as evidence of implementation behavior.
+
+Always search context and documentation for relevant implementation guardrails, constraints and rules before making changes.
